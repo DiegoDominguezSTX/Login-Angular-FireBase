@@ -24,12 +24,12 @@ export class LoginComponent implements OnInit {
       return;
     }
     Swal.fire({
-      icon: 'error',
+      type: 'info',
       title: 'Oops...',
       text: 'Cargando...!'
     });
 
-    /* Swal.showLoading(); */
+    Swal.showLoading();
     this.auth.logIn(this.usuario)
     .subscribe(resp => {
       console.log(resp);
